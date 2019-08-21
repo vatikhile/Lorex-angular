@@ -1,97 +1,135 @@
 
 
+<!-- </div> -->
+
 <!------------------------------------------------------------SIDENAV----------------------------------------------------------------->
-<mat-sidenav-container fullscreen>
-        <!-- <div  *ngIf="isOpen" (mouseover)="onToolBarMenuToggle()"> -->
-    <mat-sidenav mode="side" id="sidenav" [class.menu-open]='!isOpen' [class.menu-close]='isOpen' opened>
-        <div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="10px" class="sidenavHeader">
-            <div> <img src="../../assets//logo.png"></div>
-            <div *ngIf="isOpen==false"class="logoName">
+
+
+
+
+<!-- <div fxLayout="row" fxLayoutAlign="start center"> -->
+
+        <!-- <mat-sidenav-container fullscreen>
+              
+            <mat-sidenav mode="side" id="sidenav" [class.menu-open]='!isOpen' [class.menu-close]='isOpen' opened>
+               <div fxLayout="row" fxLayoutAlign="center center" class="sidenavHeader">
+            <div fxLayout="row" fxLayoutAlign="center"> 
+                <img src="../../assets//logo.png"></div>
+            <div *ngIf="isOpen==false" class="logoName">
                 LORAX
             </div>
         </div>
-        <div>
-                <button mat-raised-button fxFlex="97" (click)="reminder()">
-                        <div fxLayout="row" fxLayoutGap="30px" fxFlex="100">
-                            <mat-icon>    <img src="../../assets/outer.svg"></mat-icon>
-                          <span> Reminders</span>
-                        </div>
-                      </button>
-        </div>
-
-    </mat-sidenav>
-<!-- </div> -->
-
-    <mat-sidenav-content [ngStyle]="{'margin-left.px':content}">
-        <!------------------------------------------------------------TOOLBAR----------------------------------------------------------------->
-       <div fxLayout="column" fxLayoutAlign="center" fxLayoutGap="80px">
-        <div>    
-        <mat-toolbar class="mat-toolbar">
-                    <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="700px" >
-                    <div><button mat-icon-button (click)="onToolBarMenuToggle()">
-                        <img src="../../assets/outer.svg">
-                    </button>
+                <div>
+                        <button mat-raised-button fxFlex="97" (click)="reminder()">
+                                <div fxLayout="row" fxLayoutGap="30px" fxFlex="100">
+                                    <mat-icon>    <img src="../../assets/outer.svg"></mat-icon>
+                                  <span> Reminders</span>
+                                </div>
+                              </button>
                 </div>
+        
+            </mat-sidenav>
+  
+               
+            <mat-toolbar class="mat-toolbar" >
+             
+             
+                    
+                    <div ><button mat-button (click)="onToolBarMenuToggle()">
+                            <img src="../../assets/outer.svg">
+                        </button>
+                    </div>
                 
-                <div fxLayout="row" fxLayoutGap="25px">
+            
+                <div fxLayout="row" fxLayoutGap="25px" fxLayoutAlign="end">
                     <button mat-icon-button (click)=" fullScreen()">
                         <img src="../../assets/detect.svg">
                     </button>
-                
-                    <button mat-mini-fab><img src='../../assets/Mahesh_Babu_).svg' alt="mahesh"></button>
-                
+            
+                    <button mat-mini-fab><img src='../../assets' alt="m"></button>
+            
                     <button mat-icon-button (click)=" onToolBarMenuToggle()">
                         <img src="../../assets/notification.svg">
                     </button>
-                
+            
                     <button mat-icon-button (click)=" onToolBarMenuToggle()">
                         <img src="../../assets/setting.svg">
                     </button>
                 </div>
-                </div>
-                </mat-toolbar>
-            </div>
-            <div>
-        <app-dashboard>
-
-        </app-dashboard>
+               
+            </mat-toolbar>
+               
+        </mat-sidenav-container> -->
+        <!------------------------------------------------------------SIDENAV----------------------------------------------------------------->
+<!-- <mat-sidenav-container fullscreen>
+  
+<mat-sidenav mode="side" id="sidenav" [class.menu-open]='!isOpen' [class.menu-close]='isOpen' opened>
+    <div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="10px" class="sidenavHeader">
+        <div> <img src="../../assets//logo.png"></div>
+        <div *ngIf="isOpen==false"class="logoName">
+            LORAX
+        </div>
     </div>
+    <div>
+            <button mat-raised-button fxFlex="97" (click)="reminder()">
+                    <div fxLayout="row" fxLayoutGap="30px" fxFlex="100">
+                        <mat-icon>    <img src="../../assets/outer.svg"></mat-icon>
+                      <span> Reminders</span>
+                    </div>
+                  </button>
+    </div>
+
+</mat-sidenav>
+
+
+<mat-sidenav-content > -->
+    <!------------------------------------------------------------TOOLBAR----------------------------------------------------------------->
+  
+     
+    <!-- <mat-toolbar class="mat-toolbar" >
+             
+                <div>
+            </div>
+            <span class="spacer"></span>
+                <button mat-icon-button (click)=" fullScreen()">
+                    <img src="../../assets/detect.svg">
+                </button>
+            
+                <button mat-mini-fab><img src='../../assets/Mahesh_Babu_).svg' alt="mahesh"></button>
+            
+                <button mat-icon-button (click)=" onToolBarMenuToggle()">
+                    <img src="../../assets/notification.svg">
+                </button>
+            
+                <button mat-icon-button (click)=" onToolBarMenuToggle()">
+                    <img src="../../assets/setting.svg">
+                </button>
+        
+        
+            </mat-toolbar> -->
+            <!-- <mat-toolbar>
+
+
+                <mat-toolbar-row>
+                    <button mat-icon-button (click)="onToolBarMenuToggle()">
+                        <img src="../../assets/outer.svg">
+                    </button>
+                    <span class="example-spacer"></span>
+                    <mat-icon class="example-icon" aria-hidden="false" aria-label="Example heart icon">favorite</mat-icon>
+                    <mat-icon class="example-icon" aria-hidden="false" aria-label="Example delete icon">delete</mat-icon>
+                    <mat-icon class="example-icon" aria-hidden="false" aria-label="Example heart icon">favorite</mat-icon>
+                    <mat-icon class="example-icon" aria-hidden="false" aria-label="Example delete icon">delete</mat-icon>
+                </mat-toolbar-row>
+            </mat-toolbar>
+        
+        <div>
+    <app-dashboard>
+
+    </app-dashboard>
 </div>
-    </mat-sidenav-content>
-</mat-sidenav-container>
 
-
-
-
-
-
-
-
-
-
-
-<!-- <mat-sidenav-container fullscreen >
-        <mat-sidenav mode="side" #sidenav  id="sidenav"  [ngClass]=" isOpen=='true' ? 'matpad3':'matpad'" opened>
+</mat-sidenav-content>
+</mat-sidenav-container> -->
       
-            <p>aceeeeeeeeeeeeeeeee</p>
-            <p>b</p>
-            <p>v</p>
-      
-        </mat-sidenav>
-      
-        <mat-sidenav-content >
-              <mat-toolbar class="mat-toolbar">
-       
-                      <button mat-icon-button (click)=" sidenav.toggle()&&onToolBarMenuToggle()" >
-                     <img src="../../assets/outer.svg">
-                      </button>
-                  </mat-toolbar>
-          
-            {{isOpen}}
-      <app-dashboard>
-      
-      </app-dashboard>
-           
-       
-          </mat-sidenav-content>
-      </mat-sidenav-container> -->
+    
+

@@ -1,0 +1,35 @@
+#sidenav{
+    width:262px;
+    background-color: white;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+#sidenav.menu-open{
+    width:262px;
+    overflow-x: hidden;
+    
+}
+#sidenav.menu-close{
+    width:62px;
+    overflow-x: hidden;
+    
+}
+
+
+mat-sidenav-content {
+    overflow-y: scroll;
+}
+mat-toolbar{
+    z-index: 1;
+    position: fixed;
+    background-color: gray;
+    
+}
+
+.mat-toolbar .mat-icon-button{
+    background-color: transparent;
+
+}
+.icons{
+    width:50;
+}

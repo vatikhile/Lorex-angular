@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-navbar',
-  templateUrl: './navbar.component.html',
-  styleUrls: ['./navbar.component.scss']
+  selector: 'app-dashboard',
+  templateUrl: './dashboard.component.html',
+  styleUrls: ['./dashboard.component.scss']
 })
-export class NavbarComponent implements OnInit {
+export class DashboardComponent implements OnInit {
+
   isOpen:boolean=false;
   content=262;
   
@@ -40,5 +41,7 @@ export class NavbarComponent implements OnInit {
       if(methodToBeInvoked) methodToBeInvoked.call(elem);
   
   }
+  
+  }
 
-}
+

@@ -1,0 +1,43 @@
+<!------------------------------------------------------------SIDENAV----------------------------------------------------------------->
+<mat-sidenav-container fullscreen>
+    <!-- <div  *ngIf="isOpen" (mouseover)="onToolBarMenuToggle()"> -->
+    <mat-sidenav mode="side" id="sidenav" [class.menu-open]='!isOpen' [class.menu-close]='isOpen' opened>
+        <app-sidenav [value]="isOpen"></app-sidenav>
+    </mat-sidenav>
+    <!-- </div> -->
+
+    <mat-sidenav-content [ngStyle]="{'margin-left.px':content}">
+        <!------------------------------------------------------------TOOLBAR----------------------------------------------------------------->
+        <div fxLayout="column" fxLayoutAlign="center" fxLayoutGap="80px">
+            <div>
+                <mat-toolbar class="mat-toolbar">
+                    <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="700px" [class.icons]=!isOpen>
+                        <div><button mat-icon-button (click)="onToolBarMenuToggle()">
+                                <img src="../../assets/outer.svg">
+                            </button>
+                        </div>
+
+                        <div fxLayout="row" fxLayoutGap="25px">
+                            <button mat-icon-button (click)=" fullScreen()">
+                                <img src="../../assets/detect.svg">
+                            </button>
+
+                            <button mat-mini-fab><img src='../../assets/Mahesh_Babu_).svg' alt="mahesh"></button>
+
+                            <button mat-icon-button (click)=" onToolBarMenuToggle()">
+                                <img src="../../assets/notification.svg">
+                            </button>
+
+                            <button mat-icon-button (click)=" onToolBarMenuToggle()">
+                                <img src="../../assets/setting.svg">
+                            </button>
+                        </div>
+                    </div>
+                </mat-toolbar>
+            </div>
+            <div>
+                <app-sidenav-content></app-sidenav-content>
+            </div>
+        </div>
+    </mat-sidenav-content>
+</mat-sidenav-container>

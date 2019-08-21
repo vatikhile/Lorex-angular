@@ -1,4 +1,61 @@
 
+// #sidenav{
+//     // width:262px;
+//     background-color: white;
+//     overflow-y: scroll;
+//     overflow-x: hidden;
+// }
+// #sidenav.menu-open{
+//     width:262px;
+//     overflow-x: hidden;
+    
+// }
+// #sidenav.menu-close{
+//     width:62px;
+//     overflow-x: hidden;
+    
+// }
+// .sidenavHeader{
+//     // height:56px;
+// // margin-left: 64px;
+// height: 10vh;
+// background-color: white;
+
+// }
+// .sidenavHeader.logoName{
+//     font-size: 24px;
+//     font:bold;
+//     font-weight: 400;
+// }
+// mat-sidenav-content {
+//     overflow-y: scroll;
+// }
+// mat-toolbar{
+//     z-index: 0;
+//     // position: fixed;
+//     top:0;
+//     margin-top:-8px;
+//     background-color: gray;
+// }
+// .mat-toolbar .mat-icon-button{
+//     background-color: transparent;
+
+// }
+// .mat-toolbar div{
+//     flex:1;
+// }
+
+// .mat-toolbar-single-row{
+//     padding: 0 0px;
+//     width: 101%;
+//     margin-left: -8px;
+// }
+// .mat-drawer-content {
+  
+//     // height: 100%;
+
+//     display: unset;
+// }
 #sidenav{
     width:262px;
     background-color: white;
@@ -35,3 +92,13 @@ mat-toolbar{
     background-color: transparent;
 
 }
+.spacer{
+    flex: 1 1 auto;
+}
+.example-icon {
+    padding: 0 14px;
+  }
+  
+  .example-spacer {
+    flex: 1 1 auto;
+  }
