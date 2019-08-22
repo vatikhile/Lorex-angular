@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+*{
+    font-family: 'Poppins';
+}
+.mat-toolbar{
+    width:100%;
+}
+mat-toolbar>div:first-of-type{
+
+    font-size: 23px;
+    font-weight: 600;
+    color: #777;
+    border-right: 1px solid #c5c5c5;
+    margin-top: -38px
+ }
+.toolbar div> img{
+   width: 20px;
+   height: 17px;
+   margin-left: 7px;
+   margin: -3px 3px;
+}
+.toolbar div:nth-last-child(1){
+    color:#555b64;
+    font-size: 15px;
+}
+.toolbar div:nth-last-child(3){
+    color:#353c48;
+    font-size: 15px;
+    cursor: pointer;
+}
+.toolbar{
+    margin-top: -38px
+}
+.example-card {
+    
+    width: calc(100%);
+  }
+mat-toolbar{
+    padding: 0px;
+  }
+  .toolbar>div:first-child{
+   cursor: pointer;
+}

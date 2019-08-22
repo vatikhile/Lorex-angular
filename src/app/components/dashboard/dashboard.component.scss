@@ -18,12 +18,19 @@
 
 mat-sidenav-content {
     overflow-y: scroll;
+    background-color: #f1f2f7;
 }
 mat-toolbar{
     z-index: 1;
     position: fixed;
     background-color: gray;
+    height: 60px;
     
+}
+.profilePic{
+    width:32px;
+    height: 32px;
+    border-radius:50px;
 }
 
 .mat-toolbar .mat-icon-button{
@@ -31,5 +38,10 @@ mat-toolbar{
 
 }
 .icons{
-    width:50;
+    // background-color: red;
+    width: 95%;
+}
+.icons>div+div{
+    margin-left: 200px;
+    // background-color: red;
 }

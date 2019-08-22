@@ -11,19 +11,19 @@
         <div fxLayout="column" fxLayoutAlign="center" fxLayoutGap="80px">
             <div>
                 <mat-toolbar class="mat-toolbar">
-                    <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="700px" [class.icons]=!isOpen>
+                    <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="700px" [class.icons]=isOpen>
                         <div><button mat-icon-button (click)="onToolBarMenuToggle()">
                                 <img src="../../assets/outer.svg">
                             </button>
                         </div>
 
-                        <div fxLayout="row" fxLayoutGap="25px">
+                        <div fxLayout="row" fxLayoutGap="27px">
                             <button mat-icon-button (click)=" fullScreen()">
                                 <img src="../../assets/detect.svg">
                             </button>
-
-                            <button mat-mini-fab><img src='../../assets/Mahesh_Babu_).svg' alt="mahesh"></button>
-
+                            <div fxLayout="column" fxLayoutAlign="center">
+                            <img src='../../../assets/mahesh.jpeg' alt="mahesh" class="profilePic">
+                        </div>
                             <button mat-icon-button (click)=" onToolBarMenuToggle()">
                                 <img src="../../assets/notification.svg">
                             </button>
@@ -36,7 +36,7 @@
                 </mat-toolbar>
             </div>
             <div>
-                <app-sidenav-content></app-sidenav-content>
+                <app-sidenav-content [value]="isOpen"></app-sidenav-content>
             </div>
         </div>
     </mat-sidenav-content>
