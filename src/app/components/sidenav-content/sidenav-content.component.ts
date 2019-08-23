@@ -1,4 +1,5 @@
 import { Component, OnInit,Input } from '@angular/core';
+import { ValueConverter } from '@angular/compiler/src/render3/view/template';
 
 @Component({
   selector: 'app-sidenav-content',
@@ -25,6 +26,7 @@ jokes:object[];
   }
 
   ngOnInit() {
+   
   }
 @Input() value:Boolean;
 

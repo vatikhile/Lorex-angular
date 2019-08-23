@@ -4,7 +4,8 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
-
+import {MatBadgeModule} from '@angular/material'
+// import { WINDOW_PROVIDERS } from "./window.service";
 import {MatButtonModule} from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
 import {MatInputModule} from '@angular/material/input';
@@ -39,6 +40,7 @@ import { SidenavComponent } from './components/sidenav/sidenav.component';
     MatMenuModule,
     MatSidenavModule,
     MatToolbarModule,
+    MatBadgeModule,
     MatDividerModule,
     FlexLayoutModule
   ],

@@ -1,8 +1,5 @@
-<div fxLayout="column" fxFlexOffset="33px">
-
+<div fxLayout="column" fxFlexOffset="3">
     <mat-toolbar [class.mat-toolbar]=value>
-
-
         <div fxLayout="row" fxLayoutAlign="start center" fxFlex="140px">Dashboard</div>
         <div fxLayout="row" fxLayoutAlign="center center" class="toolbar">
             <div><img src="../../../assets/hoome.svg"></div>
@@ -12,72 +9,43 @@
             <div>Home</div>
             <div><img src="../../../assets/rigtharrow.svg"></div>
             <div>Dashboard</div>
+            <div>{{value}}</div>
         </div>
-
     </mat-toolbar>
-
-<div fxLayout="column"   fxLayoutGap="33px">
-
-    <div fxLayout="row" fxLayoutAlign="start start"  fxLayoutGap="33px">
-
-        <div *ngFor="let joke of jokes" fxLayout="row" >
-
-
-            <mat-card class="example-card">
-                <div> {{joke.punchline}}</div>
-                <div>{{joke.setup}}</div>
-
-            </mat-card>
-        
+    <div fxLayout="column" fxLayoutGap="33px">
+        <div fxLayout="row" fxLayoutAlign="start start" fxLayoutGap="33px">
+            <div *ngFor="let joke of jokes" fxLayout="row">
+                <mat-card class="example-card">
+                    <div> {{joke.punchline}}</div>
+                    <div>{{joke.setup}}</div>
+                </mat-card>
+            </div>
         </div>
-    </div>
-    <div fxLayout="row" fxLayoutAlign="start start"  fxLayoutGap="33px">
-
-            <div *ngFor="let joke of jokes" fxLayout="row" >
-    
-    
+        <div fxLayout="row" fxLayoutAlign="start start" fxLayoutGap="33px">
+            <div *ngFor="let joke of jokes" fxLayout="row">
                 <mat-card class="example-card">
                     <div> {{joke.punchline}}1</div>
                     <div>{{joke.setup}}</div>
-    
                 </mat-card>
-            
             </div>
         </div>
-        <div fxLayout="row" fxLayoutAlign="start start"  fxLayoutGap="33px">
-
-                <div *ngFor="let joke of jokes" fxLayout="row" >
-        
-        
-                    <mat-card class="example-card">
-                        <div> {{joke.punchline}}2</div>
-                        <div>{{joke.setup}}</div>
-        
-                    </mat-card>
-                
-                </div>
+        <div fxLayout="row" fxLayoutAlign="start start" fxLayoutGap="33px">
+            <div *ngFor="let joke of jokes" fxLayout="row">
+                <mat-card class="example-card">
+                    <div> {{joke.punchline}}2</div>
+                    <div>{{joke.setup}}</div>
+                </mat-card>
             </div>
-            <div fxLayout="row" fxLayoutAlign="start start"  fxLayoutGap="33px">
-
-
-        
-            
-                        <mat-card class="example-card">
-                            <div> fhgghgh</div>
-                            <div>fcdhzzzzzzzzzzzz</div>
-            
-                        </mat-card>
-                    
-        
-        
-                                <mat-card class="example-card">
-                                    <div> {{joke.punchline}}2</div>
-                                    <div>{{joke.setup}}</div>
-                    
-                                </mat-card>
-                          
-                    
-                
-                </div>
-</div>
+        </div>
+        <div fxLayout="row" fxLayoutAlign="start start" fxLayoutGap="33px">
+            <mat-card class="example-card">
+                <div> fhgghgh</div>
+                <div>fcdhzzzzzzzzzzzz</div>
+            </mat-card>
+            <mat-card class="example-card">
+                <div> {{joke.punchline}}2</div>
+                <div>{{joke.setup}}</div>
+            </mat-card>
+        </div>
     </div>
+</div>

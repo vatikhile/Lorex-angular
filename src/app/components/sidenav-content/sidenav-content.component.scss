@@ -4,6 +4,7 @@
 }
 .mat-toolbar{
     width:100%;
+    background-color: #f1f2f7;
 }
 mat-toolbar>div:first-of-type{
 
@@ -40,4 +41,8 @@ mat-toolbar{
   }
   .toolbar>div:first-child{
    cursor: pointer;
+}
+.main{
+    margin: 0px 0px 0px 20px; 
+    // background-color: red
 }

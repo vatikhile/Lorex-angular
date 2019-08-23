@@ -15,15 +15,14 @@
     
 }
 
-
 mat-sidenav-content {
-    overflow-y: scroll;
+    // overflow-y: scroll;
     background-color: #f1f2f7;
 }
 mat-toolbar{
     z-index: 1;
     position: fixed;
-    background-color: gray;
+    background-color: #f1f2f7;
     height: 60px;
     
 }
@@ -45,3 +44,18 @@ mat-toolbar{
     margin-left: 200px;
     // background-color: red;
 }
+.toolbarColor{
+    background-color:#343c48;
+}
+
+.mat-badge-medium.mat-badge-overlap.mat-badge-after .mat-badge-content {
+    right: 2px;
+    width: 10px;
+    top: -5px;
+    background-color: orange;
+    height: 9px;
+}
+
+// .toolbarColor .red{
+//     fill: red;
+// }

@@ -6,32 +6,67 @@
     </mat-sidenav>
     <!-- </div> -->
 
-    <mat-sidenav-content [ngStyle]="{'margin-left.px':content}">
+    <mat-sidenav-content [ngStyle]="{'margin-left.px':content}" (scroll)=getScrollCordinates($event)>
         <!------------------------------------------------------------TOOLBAR----------------------------------------------------------------->
         <div fxLayout="column" fxLayoutAlign="center" fxLayoutGap="80px">
             <div>
-                <mat-toolbar class="mat-toolbar">
-                    <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="700px" [class.icons]=isOpen>
-                        <div><button mat-icon-button (click)="onToolBarMenuToggle()">
+                <mat-toolbar class="mat-toolbar" [class.toolbarColor]="color">
+                    <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="770px" [class.icons]=isOpen>
+                        <div fxLayout="row" fxFlexOffset="4px">
+                            <button *ngIf="color==false" mat-icon-button (click)="onToolBarMenuToggle()">
                                 <img src="../../assets/outer.svg">
+                            </button>
+
+                            <button *ngIf="color==true" mat-icon-button (click)="onToolBarMenuToggle()">
+                                <img src="../../assets/outer1.svg">
                             </button>
                         </div>
 
-                        <div fxLayout="row" fxLayoutGap="27px">
-                            <button mat-icon-button (click)=" fullScreen()">
+                        <div fxLayout="row" fxLayoutGap="5px">
+                            <button *ngIf="color==false" mat-icon-button (click)=" fullScreen()">
                                 <img src="../../assets/detect.svg">
+                            </button>
+                            <button *ngIf="color==true" mat-icon-button (click)=" fullScreen()">
+                                <img src="../../assets/detect1.svg">
+                            </button>
+                            <div fxLayout="column" fxLayoutAlign="center" fxFlexOffset="8px">
+                                <img src='../../../assets/mahesh.jpeg' alt="mahesh" class="profilePic">
+                            </div>
+                            <button *ngIf="color==false" mat-icon-button (click)=" onToolBarMenuToggle()">
+                                <mat-icon matBadge="&#8288;" matBadgePosition="after" ><img src="../../../assets/notification.svg"></mat-icon>
+                            </button>
+                            <button *ngIf="color==true" mat-icon-button (click)=" onToolBarMenuToggle()">
+                                <mat-icon matBadge="&#8288;" matBadgePosition="after" ><img src="../../../assets/notification1.svg"></mat-icon>
+                            </button>
+                            <button *ngIf="color==false" mat-icon-button (click)=" onToolBarMenuToggle()">
+                                <img src="../../../assets/setting.svg">
+                            </button>
+                            <button *ngIf="color==true" mat-icon-button (click)=" onToolBarMenuToggle()">
+                                <img src="../../../assets/setting1.svg">
+                            </button>
+                            <!-- <button mat-icon-button (click)=" onToolBarMenuToggle()">
+                                <img src="../../../assets/fullscreen.svg">
+                            </button> -->
+                        </div>
+
+                        <!-- <div fxLayout="row" fxLayoutGap="27px" *ngIf="color==true" >
+                            <button mat-icon-button (click)=" fullScreen()">
+                                <img src="../../assets/fullScreen.svg" class="red">
                             </button>
                             <div fxLayout="column" fxLayoutAlign="center">
                             <img src='../../../assets/mahesh.jpeg' alt="mahesh" class="profilePic">
                         </div>
                             <button mat-icon-button (click)=" onToolBarMenuToggle()">
-                                <img src="../../assets/notification.svg">
+                                <img src="../../../assets/notification.svg">
                             </button>
 
                             <button mat-icon-button (click)=" onToolBarMenuToggle()">
-                                <img src="../../assets/setting.svg">
+                                <img src="../../../assets/setting.svg">
                             </button>
-                        </div>
+                            <button mat-icon-button (click)=" onToolBarMenuToggle()">
+                                <img src="../../../assets/fullscreen.svg">
+                            </button>
+                        </div> -->
                     </div>
                 </mat-toolbar>
             </div>
