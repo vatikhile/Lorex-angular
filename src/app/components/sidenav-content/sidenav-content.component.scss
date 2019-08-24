@@ -6,8 +6,8 @@
     width:100%;
     background-color: #f1f2f7;
 }
-mat-toolbar>div:first-of-type{
-
+mat-toolbar >div:first-of-type{
+background-color: red;
     font-size: 23px;
     font-weight: 600;
     color: #777;
@@ -17,32 +17,35 @@ mat-toolbar>div:first-of-type{
 .toolbar div> img{
    width: 20px;
    height: 17px;
-   margin-left: 7px;
-   margin: -3px 3px;
+   margin: -4px 5px;
 }
 .toolbar div:nth-last-child(1){
     color:#555b64;
     font-size: 15px;
 }
 .toolbar div:nth-last-child(3){
-    color:#353c48;
+    color:#20252c;
     font-size: 15px;
     cursor: pointer;
 }
 .toolbar{
     margin-top: -38px
 }
-.example-card {
-    
-    width: calc(100%);
-  }
+// .example-card {
+// background-color: yellow;
+//   }
 mat-toolbar{
     padding: 0px;
   }
   .toolbar>div:first-child{
-   cursor: pointer;
+   cursor: pointer;           
 }
 .main{
     margin: 0px 0px 0px 20px; 
     // background-color: red
+}
+.cards>div>div + mat-card{
+   background-color: yellow; 
+   width: 222px;
+height: 113px;
 }

@@ -22,6 +22,10 @@ jokes:object[];
         setup: "A kid threw a lump of cheddar at me",
         punchline: "I thought ‘That’s not very mature’"
       },
+      {
+        setup: "A kid threw a lump of cheddar at me",
+        punchline: "I thought ‘That’s not very mature’"
+      },
     ];
   }
 

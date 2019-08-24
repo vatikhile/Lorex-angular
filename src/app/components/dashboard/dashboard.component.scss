@@ -6,17 +6,11 @@
 }
 #sidenav.menu-open{
     width:262px;
-    overflow-x: hidden;
-    
 }
 #sidenav.menu-close{
     width:62px;
-    overflow-x: hidden;
-    
 }
-
 mat-sidenav-content {
-    // overflow-y: scroll;
     background-color: #f1f2f7;
 }
 mat-toolbar{
@@ -24,30 +18,25 @@ mat-toolbar{
     position: fixed;
     background-color: #f1f2f7;
     height: 60px;
-    
 }
 .profilePic{
     width:32px;
     height: 32px;
     border-radius:50px;
 }
-
 .mat-toolbar .mat-icon-button{
     background-color: transparent;
 
 }
 .icons{
-    // background-color: red;
     width: 95%;
 }
 .icons>div+div{
     margin-left: 200px;
-    // background-color: red;
 }
 .toolbarColor{
     background-color:#343c48;
 }
-
 .mat-badge-medium.mat-badge-overlap.mat-badge-after .mat-badge-content {
     right: 2px;
     width: 10px;
@@ -55,7 +44,3 @@ mat-toolbar{
     background-color: orange;
     height: 9px;
 }
-
-// .toolbarColor .red{
-//     fill: red;
-// }

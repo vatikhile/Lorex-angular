@@ -9,17 +9,16 @@
             <div>Home</div>
             <div><img src="../../../assets/rigtharrow.svg"></div>
             <div>Dashboard</div>
-            <div>{{value}}</div>
         </div>
     </mat-toolbar>
-    <div fxLayout="column" fxLayoutGap="33px">
+    <div fxLayout="column" fxLayoutGap="33px" class="cards">
         <div fxLayout="row" fxLayoutAlign="start start" fxLayoutGap="33px">
-            <div *ngFor="let joke of jokes" fxLayout="row">
-                <mat-card class="example-card">
-                    <div> {{joke.punchline}}</div>
-                    <div>{{joke.setup}}</div>
+            <!-- <div *ngFor="let joke of jokes" fxLayout="row"> -->
+                <mat-card>
+                    <div> TotalInacome</div>
+                    <div>$758</div>
                 </mat-card>
-            </div>
+            <!-- </div> -->
         </div>
         <div fxLayout="row" fxLayoutAlign="start start" fxLayoutGap="33px">
             <div *ngFor="let joke of jokes" fxLayout="row">

@@ -33,10 +33,12 @@
                                 <img src='../../../assets/mahesh.jpeg' alt="mahesh" class="profilePic">
                             </div>
                             <button *ngIf="color==false" mat-icon-button (click)=" onToolBarMenuToggle()">
-                                <mat-icon matBadge="&#8288;" matBadgePosition="after" ><img src="../../../assets/notification.svg"></mat-icon>
+                                <mat-icon matBadge="&#8288;" matBadgePosition="after"><img
+                                        src="../../../assets/notification.svg"></mat-icon>
                             </button>
                             <button *ngIf="color==true" mat-icon-button (click)=" onToolBarMenuToggle()">
-                                <mat-icon matBadge="&#8288;" matBadgePosition="after" ><img src="../../../assets/notification1.svg"></mat-icon>
+                                <mat-icon matBadge="&#8288;" matBadgePosition="after"><img
+                                        src="../../../assets/notification1.svg"></mat-icon>
                             </button>
                             <button *ngIf="color==false" mat-icon-button (click)=" onToolBarMenuToggle()">
                                 <img src="../../../assets/setting.svg">
@@ -44,29 +46,7 @@
                             <button *ngIf="color==true" mat-icon-button (click)=" onToolBarMenuToggle()">
                                 <img src="../../../assets/setting1.svg">
                             </button>
-                            <!-- <button mat-icon-button (click)=" onToolBarMenuToggle()">
-                                <img src="../../../assets/fullscreen.svg">
-                            </button> -->
                         </div>
-
-                        <!-- <div fxLayout="row" fxLayoutGap="27px" *ngIf="color==true" >
-                            <button mat-icon-button (click)=" fullScreen()">
-                                <img src="../../assets/fullScreen.svg" class="red">
-                            </button>
-                            <div fxLayout="column" fxLayoutAlign="center">
-                            <img src='../../../assets/mahesh.jpeg' alt="mahesh" class="profilePic">
-                        </div>
-                            <button mat-icon-button (click)=" onToolBarMenuToggle()">
-                                <img src="../../../assets/notification.svg">
-                            </button>
-
-                            <button mat-icon-button (click)=" onToolBarMenuToggle()">
-                                <img src="../../../assets/setting.svg">
-                            </button>
-                            <button mat-icon-button (click)=" onToolBarMenuToggle()">
-                                <img src="../../../assets/fullscreen.svg">
-                            </button>
-                        </div> -->
                     </div>
                 </mat-toolbar>
             </div>
