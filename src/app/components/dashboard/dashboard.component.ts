@@ -1,4 +1,4 @@
-import { Component, OnInit,Inject,HostListener } from '@angular/core';
+import { Component, OnInit, Inject, HostListener } from '@angular/core';
 import { DOCUMENT } from '@angular/platform-browser';
 // import { WINDOW } from './window.service';
 
@@ -12,20 +12,20 @@ export class DashboardComponent implements OnInit {
   isOpen: boolean = false;
   content = 262;
   navIsFixed: boolean;
-  scrollTop:any;
-  scrollLeft:any;
+  scrollTop: any;
+  scrollLeft: any;
   scrollTopHeight: any;
 
   constructor(@Inject(DOCUMENT) private document: Document) {
     // this.window = this.document.defaultView;
-   }
+  }
   opened = false;
 
   value: any;
-  color:boolean=false;
+  color: boolean = false;
   ngOnInit() {
     console.log("isopen", this.isOpen);
-  
+
     // this.onWindowScroll();
   }
   onToolBarMenuToggle() {
@@ -51,7 +51,7 @@ export class DashboardComponent implements OnInit {
     if (methodToBeInvoked) methodToBeInvoked.call(elem);
 
   }
-  @HostListener("window:scroll", [])
+ 
 
 
   // onWindowScroll() {
@@ -67,20 +67,20 @@ export class DashboardComponent implements OnInit {
   //   console.log('vaibhaw')
 
   // }
- 
 
-getScrollCordinates($event) {
-      // console.log($event)
-      this.scrollTopHeight=$event.target.scrollTop
-      if (this.scrollTopHeight>23) {
-       this.color=true;
-  
-      }
-      else {
-        this.color=false;
-      }
-  console.log(this.scrollTopHeight);
-  
+  @HostListener("window:scroll", [])
+  getScrollCordinates($event) {
+    // console.log($event)
+    this.scrollTopHeight = $event.target.scrollTop
+    if (this.scrollTopHeight > 23) {
+      this.color = true;
+
     }
+    else {
+      this.color = false;
+    }
+    console.log(this.scrollTopHeight);
+
+  }
 
 }

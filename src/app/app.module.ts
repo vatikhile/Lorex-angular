@@ -18,7 +18,10 @@ import {FlexLayoutModule} from '@angular/flex-layout';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { SidenavContentComponent } from './components/sidenav-content/sidenav-content.component';
 import { SidenavComponent } from './components/sidenav/sidenav.component';
-
+import {MatListModule} from '@angular/material/list';
+import {MatTableModule} from '@angular/material/table';
+// import {AccordionModule} from 'primeng/accordion';     
+// import {MenuItem} from 'primeng/api';
 
 @NgModule({
   declarations: [
@@ -35,10 +38,13 @@ import { SidenavComponent } from './components/sidenav/sidenav.component';
     BrowserAnimationsModule,
     MatButtonModule,
     MatIconModule,
+    MatTableModule,
+    // AccordionModule,
     MatCardModule,
     MatInputModule,
     MatMenuModule,
     MatSidenavModule,
+    MatListModule,
     MatToolbarModule,
     MatBadgeModule,
     MatDividerModule,

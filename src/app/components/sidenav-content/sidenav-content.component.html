@@ -2,7 +2,7 @@
     <mat-toolbar [class.mat-toolbar]=value>
         <div fxLayout="row" fxLayoutAlign="start center" fxFlex="140px">Dashboard</div>
         <div fxLayout="row" fxLayoutAlign="center center" class="toolbar">
-            <div><img src="../../../assets/hoome.svg"></div>
+            <div fxFlexOffset="2"><img src="../../../assets/hoome.svg"></div>
             <div>
                 <img src="../../../assets/rigtharrow.svg">
             </div>
@@ -11,40 +11,234 @@
             <div>Dashboard</div>
         </div>
     </mat-toolbar>
-    <div fxLayout="column" fxLayoutGap="33px" class="cards">
+    <div fxLayout="column" fxLayoutGap="32px" class="smallCards" [class.small-cards]="value" >
         <div fxLayout="row" fxLayoutAlign="start start" fxLayoutGap="33px">
             <!-- <div *ngFor="let joke of jokes" fxLayout="row"> -->
-                <mat-card>
-                    <div> TotalInacome</div>
+            <mat-card>
+                <div fxLayoutAlign="center"> Total Income</div>
+                <div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="4px">
                     <div>$758</div>
-                </mat-card>
+                    <div fxLayout="row" fxLayoutAlign="center"><img src="../../../assets/trendingup.svg"></div>
+
+                </div>
+           
+
+                <!-- <div><p-chart type="bar" [data]="data"></p-chart></div> -->
+            </mat-card>
+            <mat-card>
+                <div fxLayoutAlign="center"> Order Received</div>
+                <div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="4px">
+                    <div>1025</div>
+                    <div fxLayoutAlign="center"><img src="../../../assets/trendingdown.svg"></div>
+                </div>
+            </mat-card>
+            <mat-card>
+                <div fxLayoutAlign="center"> Total Sales</div>
+                <div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="4px">
+                    <div>956</div>
+                    <div fxLayoutAlign="center"><img src="../../../assets/trendingup.svg"></div>
+                </div>
+            </mat-card>
+            <mat-card>
+                <div fxLayoutAlign="center"> Total Active Users</div>
+                <div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="4px">
+                    <div>214</div>
+                    <div fxLayoutAlign="center"><img src="../../../assets/trendingdown.svg"></div>
+                </div>
+            </mat-card>
             <!-- </div> -->
         </div>
-        <div fxLayout="row" fxLayoutAlign="start start" fxLayoutGap="33px">
-            <div *ngFor="let joke of jokes" fxLayout="row">
-                <mat-card class="example-card">
-                    <div> {{joke.punchline}}1</div>
-                    <div>{{joke.setup}}</div>
-                </mat-card>
-            </div>
-        </div>
-        <div fxLayout="row" fxLayoutAlign="start start" fxLayoutGap="33px">
-            <div *ngFor="let joke of jokes" fxLayout="row">
-                <mat-card class="example-card">
-                    <div> {{joke.punchline}}2</div>
-                    <div>{{joke.setup}}</div>
-                </mat-card>
-            </div>
-        </div>
-        <div fxLayout="row" fxLayoutAlign="start start" fxLayoutGap="33px">
-            <mat-card class="example-card">
-                <div> fhgghgh</div>
-                <div>fcdhzzzzzzzzzzzz</div>
+        <div fxLayout="row" fxLayoutAlign="start start" fxLayoutGap="33px" class="large-cards" [class.largeCards]="!value">
+            <!-- <div *ngFor="let joke of jokes" fxLayout="row"> -->
+            <mat-card>
+                <div fxLayout="row" fxLayoutAlign="space-between">
+                    <div fxLayout="row" fxLayoutGap="4px">
+                        <div class="card-title">Recent</div>
+                        <div>Report</div>
+                    </div>
+                    <div><button mat-icon-button fxLayoutAlign="end">
+                            <mat-icon><img src="../../../assets/more.svg"></mat-icon>
+                        </button></div>
+                </div>
             </mat-card>
-            <mat-card class="example-card">
-                <div> {{joke.punchline}}2</div>
-                <div>{{joke.setup}}</div>
+            <mat-card>
+                <div fxLayout="row" fxLayoutAlign="space-between">
+                    <div fxLayout="row" fxLayoutGap="4px">
+                        <div class="card-title">Recent</div>
+                        <div>Report</div>
+                    </div>
+                    <div><button mat-icon-button fxLayoutAlign="end">
+                            <mat-icon><img src="../../../assets/more.svg"></mat-icon>
+                        </button></div>
+                </div>
             </mat-card>
+            <!-- </div> -->
         </div>
+        <div fxLayout="row" fxLayoutAlign="start start" fxLayoutGap="33px" class="info-cards">
+            <mat-card>
+                <div fxLayout="row" fxLayoutAlign="space-between">
+                    <div fxLayout="row" fxLayoutGap="4px">
+                        <div class="card-title">Clients</div>
+                        <div>Details</div>
+                    </div>
+                    <div><button mat-icon-button fxLayoutAlign="end">
+                            <mat-icon><img src="../../../assets/more.svg"></mat-icon>
+                        </button></div>
+                </div>
+                <mat-divider></mat-divider>
+                <div fxLayout="row" fxLayoutAlign="start">
+                    <mat-list >
+                        <mat-list-item>
+                            <div fxLayout="row"  class="table-head">
+                                <div>#</div>
+                                <div fxFlexOffset="50px">Name</div>
+                                <div  fxFlexOffset="90px">Email</div>
+                                <div  fxFlexOffset="90px">status</div>
+                                <div  fxFlexOffset="54px">Project Name</div>
+                                <div  fxFlexOffset="23px">Action</div>
+                            </div>
+                        </mat-list-item>
+                        <mat-divider></mat-divider>
+                        <!-- <div *ngFor="let item of 4"> -->
+                        <mat-list-item>
+                            <div fxLayout="row" fxLayoutAign="center center">
+                                <div fxLayout="column" fxLayoutAlign="center" class="profilePic">
+                                    <img src='../../../assets/mahesh.jpeg' alt="mahesh">
+                                </div>
+                                <div fxLayout="row" class="user-info">
+                                    <div>John deo</div>
+                                    <div>xyz@gmail.com</div>
+                                    <div fxLayout="row" fxLayoutAlign="center center">Active</div>
+                                    <div>ERP System</div>
+                                    <div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="12px"><div><img src="../../../assets/edit.svg"></div> <div><img src="../../../assets/delete.svg"></div>
+                                </div>
+                            </div>
+                            </div>
+                        </mat-list-item>
+                        <!-- </div> -->
+                        <mat-divider></mat-divider>
+                        <mat-list-item>
+                                <div fxLayout="row" fxLayoutAign="center center">
+                                    <div fxLayout="column" fxLayoutAlign="center" class="profilePic">
+                                        <img src='../../../assets/mahesh.jpeg' alt="mahesh">
+                                    </div>
+                                    <div fxLayout="row" class="user-info">
+                                        <div>John deo</div>
+                                        <div>xyz@gmail.com</div>
+                                        <div fxLayout="row" fxLayoutAlign="center center" style="background-color: green">Inactive</div>
+                                        <div>ERP System</div>
+                                        <div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="12px"><div><img src="../../../assets/edit.svg"></div> <div><img src="../../../assets/delete.svg"></div>
+                                    </div>
+                                </div>
+                                </div>
+                            </mat-list-item>
+                        <mat-divider></mat-divider>
+                        <mat-list-item>
+                                <div fxLayout="row" fxLayoutAign="center center">
+                                    <div fxLayout="column" fxLayoutAlign="center" class="profilePic">
+                                        <img src='../../../assets/mahesh.jpeg' alt="mahesh">
+                                    </div>
+                                    <div fxLayout="row" class="user-info">
+                                        <div>John deo</div>
+                                        <div>xyz@gmail.com</div>
+                                        <div fxLayout="row" fxLayoutAlign="center center">Active</div>
+                                        <div>ERP System</div>
+                                        <div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="12px"><div><img src="../../../assets/edit.svg"></div> <div><img src="../../../assets/delete.svg"></div>
+                                    </div>
+                                </div>
+                                </div>
+                            </mat-list-item>
+                        <mat-divider></mat-divider>
+                        <mat-list-item>
+                                <div fxLayout="row" fxLayoutAign="center center">
+                                    <div fxLayout="column" fxLayoutAlign="center" class="profilePic">
+                                        <img src='../../../assets/mahesh.jpeg' alt="mahesh">
+                                    </div>
+                                    <div fxLayout="row" class="user-info">
+                                        <div>John deo</div>
+                                        <div>xyz@gmail.com</div>
+                                        <div fxLayout="row" fxLayoutAlign="center center" style="background-color: green">Inactive</div>
+                                        <div>ERP System</div>
+                                        <div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="12px"><div><img src="../../../assets/edit.svg"></div> <div><img src="../../../assets/delete.svg"></div>
+                                    </div>
+                                </div>
+                                </div>
+                            </mat-list-item>
+                        <mat-divider></mat-divider>
+                        <mat-list-item>
+                                <div fxLayout="row" fxLayoutAign="center center">
+                                    <div fxLayout="column" fxLayoutAlign="center" class="profilePic">
+                                        <img src='../../../assets/mahesh.jpeg' alt="mahesh">
+                                    </div>
+                                    <div fxLayout="row" class="user-info">
+                                        <div>John deo</div>
+                                        <div>xyz@gmail.com</div>
+                                        <div fxLayout="row" fxLayoutAlign="center center" style="background-color: green">Inactive</div>
+                                        <div>ERP System</div>
+                                        <div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="12px"><div><img src="../../../assets/edit.svg"></div> <div><img src="../../../assets/delete.svg"></div>
+                                    </div>
+                                </div>
+                                </div>
+                            </mat-list-item>
+                        <mat-divider></mat-divider>
+                        <mat-list-item>
+                                <div fxLayout="row" fxLayoutAign="center center">
+                                    <div fxLayout="column" fxLayoutAlign="center" class="profilePic">
+                                        <img src='../../../assets/mahesh.jpeg' alt="mahesh">
+                                    </div>
+                                    <div fxLayout="row" class="user-info">
+                                        <div>John deo</div>
+                                        <div>xyz@gmail.com</div>
+                                        <div fxLayout="row" fxLayoutAlign="center center">Active</div>
+                                        <div>ERP System</div>
+                                        <div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="12px"><div><img src="../../../assets/edit.svg"></div> <div><img src="../../../assets/delete.svg"></div>
+                                    </div>
+                                </div>
+                                </div>
+                            </mat-list-item>
+                        <mat-divider></mat-divider>
+                       
+                    </mat-list>
+                </div>
+            </mat-card>
+            <mat-card>
+                <div fxLayout="row" fxLayoutAlign="space-between">
+                    <div fxLayout="row" fxLayoutGap="4px">
+                        <div class="card-title">New</div>
+                        <div>Projects</div>
+                    </div>
+                    <div><button mat-icon-button fxLayoutAlign="end">
+                            <mat-icon><img src="../../../assets/more.svg"></mat-icon>
+                        </button></div>
+                </div>
+            </mat-card>
+
+        </div>
+        <div fxLayout="row" fxLayoutAlign="start start" fxLayoutGap="33px" class="social-cards">
+                <!-- <div *ngFor="let joke of jokes" fxLayout="row"> -->
+                <mat-card>
+                    <div fxLayoutAlign="center"> <img src="../../../assets/twitter.svg"></div>
+                    <div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="4px">
+                            <div>TWITTER</div>
+    
+                    </div>
+               
+    
+                    <!-- <div><p-chart type="bar" [data]="data"></p-chart></div> -->
+                </mat-card>
+                <mat-card>
+                    <div fxLayoutAlign="center"> <img src="../../../assets/instagram.svg"></div>
+                    <div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="4px">
+                            <div>INSTAGRAM</div>
+                    </div>
+                </mat-card>
+                <mat-card>
+                    <div fxLayoutAlign="center"> <img src="../../../assets/facebook.svg"></div>
+                    <div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="4px">
+                    <div>FACEBOOK</div>
+                    </div>
+                </mat-card>
+              
+                <!-- </div> -->
+            </div>
     </div>
-</div>

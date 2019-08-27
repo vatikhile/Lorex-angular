@@ -11,10 +11,14 @@
     border-radius:80px;
     
 }
-.sidenavHeader{
+mat-toolbar{
     height:56px;
     cursor: pointer;
     z-index: 1;
+    position: fixed;
+    width: 246px;
+    background-color: white;
+
 }
 .logoName{
     font-size: 24px;
@@ -42,22 +46,52 @@
     margin: 8px 13px 0px;
     font-size: 14px;
 }
-
-//  mat-icon{
-//     height: 26px;
-//     width:11px;
-// }
-.menuToggle>div>div>img{
-    height: 30px;
-     width:15px;
+.menuOpen{
+    height: 49px;
+    border-radius: 3rem;
+    position: relative;
+    font-family: 'Poppins';
+    cursor: pointer;
+    margin: 8px 13px 0px;
+    font-size: 14px;
 }
-.menuToggle>div+div>img{
-    height: 30px;
-     width:15px;
+.menuOpen:hover{
+    background:rgb(248, 248, 248);
+    color:#5783c7;
 }
 .menu{
     width:30px;
     height: 30px;
+}
+.menuHome{
+    width:30px;
+    height: 30px;
     border-radius: 50px;
     background-color:  rgba(146,144,144,0.28);
+    margin-top: 58px;
+}
+.profile{
+    margin: 75px 0px 0px 0px;
+}
+.toolbar{
+    width: 48px;
+}
+.logo{
+    margin-left: -6px;
+}
+.menuToggl{
+    height: 49px;
+    border-radius: 3rem;
+    position: relative;
+    font-family: 'Poppins';
+    cursor: pointer;
+    margin:0px 12px;
+    font-size: 14px;
+}
+.menuToggl:hover{
+    background:rgb(248, 248, 248);
+    color:#5783c7;
+}
+.logoNam{
+    margin-left: 40px;
 }

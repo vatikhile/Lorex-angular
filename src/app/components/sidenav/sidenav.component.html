@@ -1,12 +1,15 @@
 <div fxLayout="column">
   <div fxLayout="column" fxLayoutGap="25px">
-    <div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="10px" class="sidenavHeader">
-      <div> <img src="../../assets//logo.png"></div>
-      <div *ngIf="value==false" class="logoName">
-        Lorax
+    <mat-toolbar fxLayout="row" [class.toolbar]="value">
+      <div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="10px" [class.logoNam]="!value"
+        [class.logo]="value">
+        <div fxLayout="row" fxLayoutAlign="center center"> <img src="../../assets//logo.png"></div>
+        <div *ngIf="value==false" class="logoName">
+          Lorax
+        </div>
       </div>
-    </div>
-    <div fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="20px" *ngIf="value==false">
+    </mat-toolbar>
+    <div fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="14px" *ngIf="value==false" class="profile">
       <div fxLayout="row" fxLayoutAlign="center" class="image">
         <img src="../../../assets/mahesh.jpeg" alt="mahesh babu">
       </div>
@@ -19,17 +22,42 @@
     </div>
   </div>
   <div fxLayout="column">
-    <div fxLayout="row" fxLayoutAlign="space-evenly center" class="menuToggle" [class.menu]="value">
+    <div fxLayout="row" fxLayoutAlign="space-evenly center" class="menuToggle" [class.menuHome]="value"
+      (click)="home()">
       <div fxLayout="row" fxLayoutAlign="none center" fxLayoutGap="15px" fxFlex="63">
         <div fxLayout="row" fxLayoutAlign="center center">
-          <img src="../../assets/outer.svg">
+          <img src="../../../assets/tachometer.svg">
         </div>
         <div *ngIf="value==false">Home</div>
       </div>
-      <div *ngIf="value==false" fxLayout="row" fxLayoutAlign="center center"> <img src="../../assets/add.svg">
+      <div *ngIf="value==false" fxLayout="row" fxLayoutAlign="center center"> <img src="../../../assets/minus.svg">
       </div>
     </div>
-    <div fxLayout="row" fxLayoutAlign="space-evenly center" class="menuToggle" [class.menu]="value">
+    <div *ngIf="value==false">
+      <div fxLayout="row" fxLayoutAlign="space-evenly center" class="menuOpen" [class.menu]="value" (click)="home()"
+        *ngIf="open==false">
+        <div fxLayout="row" fxLayoutAlign="none center" fxLayoutGap="15px" fxFlex="63">
+          <div fxLayout="row" fxLayoutAlign="center center">
+            <img src="../../../assets/dot.svg">
+          </div>
+          <div *ngIf="value==false">Dashboard1</div>
+        </div>
+      </div>
+      <div fxLayout="row" fxLayoutAlign="space-evenly center" class="menuOpen" [class.menu]="value" (click)="home()"
+        *ngIf="open==false">
+        <div fxLayout="row" fxLayoutAlign="none center" fxFlexOffset="54px" fxLayoutGap="15px" fxFlex="63">
+          <div *ngIf="value==false">Dashboard2</div>
+        </div>
+      </div>
+      <div fxLayout="row" fxLayoutAlign="space-evenly center" class="menuOpen" [class.menu]="value" (click)="home()"
+        *ngIf="open==false">
+        <div fxLayout="row" fxLayoutAlign="none center" fxLayoutGap="15px" fxFlexOffset="54px" fxFlex="63">
+          <div *ngIf="value==false">Dashboard3</div>
+        </div>
+      </div>
+    </div>
+
+    <div fxLayout="row" fxLayoutAlign="space-evenly center" class="menuToggl" [class.menu]="value">
       <div fxLayout="row" fxLayoutAlign="none center" fxLayoutGap="15px" fxFlex="63">
         <div fxLayout="row" fxLayoutAlign="center center">
           <img src="../../../assets/events.svg">
@@ -39,57 +67,57 @@
       <div *ngIf="value==false" fxLayout="row" fxLayoutAlign="center center"> <img src="../../assets/add.svg">
       </div>
     </div>
-    <div fxLayout="row" fxLayoutAlign="space-evenly center" class="menuToggle" [class.menu]="value">
+    <div fxLayout="row" fxLayoutAlign="space-evenly center" class="menuToggl" [class.menu]="value">
       <div fxLayout="row" fxLayoutAlign="none center" fxLayoutGap="15px" fxFlex="63">
         <div fxLayout="row" fxLayoutAlign="center center">
-          <img src="../../assets/outer.svg">
+          <img src="../../../assets/events.svg">
         </div>
         <div *ngIf="value==false">Email</div>
       </div>
       <div *ngIf="value==false" fxLayout="row" fxLayoutAlign="center center"> <img src="../../assets/add.svg">
       </div>
     </div>
-    <div fxLayout="row" fxLayoutAlign="space-evenly center" class="menuToggle" [class.menu]="value">
+    <div fxLayout="row" fxLayoutAlign="space-evenly center" class="menuToggl" [class.menu]="value">
       <div fxLayout="row" fxLayoutAlign="none center" fxLayoutGap="15px" fxFlex="63">
         <div fxLayout="row" fxLayoutAlign="center center">
-          <img src="../../assets/outer.svg">
+          <img src="../../../assets/events.svg">
         </div>
         <div *ngIf="value==false">Apps</div>
       </div>
       <div *ngIf="value==false" fxLayout="row" fxLayoutAlign="center center"> <img src="../../assets/add.svg">
       </div>
     </div>
-    <div fxLayout="row" fxLayoutAlign="space-evenly center" class="menuToggle" [class.menu]="value">
+    <div fxLayout="row" fxLayoutAlign="space-evenly center" class="menuToggl" [class.menu]="value">
       <div fxLayout="row" fxLayoutAlign="none center" fxLayoutGap="15px" fxFlex="63">
         <div fxLayout="row" fxLayoutAlign="center center">
-          <img src="../../assets/outer.svg">
+          <img src="../../../assets/events.svg">
         </div>
         <div *ngIf="value==false">E-commerce</div>
       </div>
       <div *ngIf="value==false" fxLayout="row" fxLayoutAlign="center center"> <img src="../../assets/add.svg">
       </div>
     </div>
-    <div fxLayout="row" fxLayoutAlign="space-evenly center" class="menuToggle" [class.menu]="value">
+    <div fxLayout="row" fxLayoutAlign="space-evenly center" class="menuToggl" [class.menu]="value">
       <div fxLayout="row" fxLayoutAlign="none center" fxLayoutGap="15px" fxFlex="63">
         <div fxLayout="row" fxLayoutAlign="center center">
-          <img src="../../assets/outer.svg">
+          <img src="../../../assets/events.svg">
         </div>
         <div *ngIf="value==false">Widgets</div>
       </div>
       <div *ngIf="value==false" fxLayout="row" fxLayoutAlign="center center"> <img src="../../assets/add.svg">
       </div>
     </div>
-    <div fxLayout="row" fxLayoutAlign="space-evenly center" class="menuToggle" [class.menu]="value">
+    <div fxLayout="row" fxLayoutAlign="space-evenly center" class="menuToggl" [class.menu]="value">
       <div fxLayout="row" fxLayoutAlign="none center" fxLayoutGap="15px" fxFlex="63">
         <div fxLayout="row" fxLayoutAlign="center center">
-          <img src="../../assets/outer.svg">
+          <img src="../../../assets/events.svg">
         </div>
-        <div *ngIf="value==false">User Interfaces(UI)</div>
+        <div *ngIf="value==false">User Interfaces</div>
       </div>
       <div *ngIf="value==false" fxLayout="row" fxLayoutAlign="center center"> <img src="../../assets/add.svg">
       </div>
     </div>
-    <div fxLayout="row" fxLayoutAlign="space-evenly center" class="menuToggle" [class.menu]="value">
+    <div fxLayout="row" fxLayoutAlign="space-evenly center" class="menuToggl" [class.menu]="value">
       <div fxLayout="row" fxLayoutAlign="none center" fxLayoutGap="15px" fxFlex="63">
         <div fxLayout="row" fxLayoutAlign="center center">
           <img src="../../../assets/icons.svg">
@@ -99,40 +127,40 @@
       <div *ngIf="value==false" fxLayout="row" fxLayoutAlign="center center"> <img src="../../assets/add.svg">
       </div>
     </div>
-    <div fxLayout="row" fxLayoutAlign="space-evenly center" class="menuToggle" [class.menu]="value">
+    <div fxLayout="row" fxLayoutAlign="space-evenly center" class="menuToggl" [class.menu]="value">
       <div fxLayout="row" fxLayoutAlign="none center" fxLayoutGap="15px" fxFlex="63">
         <div fxLayout="row" fxLayoutAlign="center center">
-          <img src="../../assets/outer.svg">
+          <img src="../../../assets/events.svg">
         </div>
         <div *ngIf="value==false">Tables</div>
       </div>
       <div *ngIf="value==false" fxLayout="row" fxLayoutAlign="center center"> <img src="../../assets/add.svg">
       </div>
     </div>
-    <div fxLayout="row" fxLayoutAlign="space-evenly center" class="menuToggle" [class.menu]="value">
+    <div fxLayout="row" fxLayoutAlign="space-evenly center" class="menuToggl" [class.menu]="value">
       <div fxLayout="row" fxLayoutAlign="none center" fxLayoutGap="15px" fxFlex="63">
         <div fxLayout="row" fxLayoutAlign="center center">
-          <img src="../../assets/outer.svg">
+          <img src="../../../assets/events.svg">
         </div>
         <div *ngIf="value==false">Medias</div>
       </div>
       <div *ngIf="value==false" fxLayout="row" fxLayoutAlign="center center"> <img src="../../assets/add.svg">
       </div>
     </div>
-    <div fxLayout="row" fxLayoutAlign="space-evenly center" class="menuToggle" [class.menu]="value">
+    <div fxLayout="row" fxLayoutAlign="space-evenly center" class="menuToggl" [class.menu]="value">
       <div fxLayout="row" fxLayoutAlign="none center" fxLayoutGap="15px" fxFlex="63">
         <div fxLayout="row" fxLayoutAlign="center center">
-          <img src="../../assets/outer.svg">
+          <img src="../../../assets/events.svg">
         </div>
         <div *ngIf="value==false">charts</div>
       </div>
       <div *ngIf="value==false" fxLayout="row" fxLayoutAlign="center center"> <img src="../../assets/add.svg">
       </div>
     </div>
-    <div fxLayout="row" fxLayoutAlign="space-evenly center" class="menuToggle" [class.menu]="value">
+    <div fxLayout="row" fxLayoutAlign="space-evenly center" class="menuToggl" [class.menu]="value">
       <div fxLayout="row" fxLayoutAlign="none center" fxLayoutGap="15px" fxFlex="63">
         <div fxLayout="row" fxLayoutAlign="center center">
-          <img src="../../assets/outer.svg">
+          <img src="../../../assets/events.svg">
         </div>
         <div *ngIf="value==false">Timelines</div>
       </div>
