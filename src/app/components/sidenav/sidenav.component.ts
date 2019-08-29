@@ -7,6 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class SidenavComponent implements OnInit {
   open: boolean = false;
+ 
   constructor() { }
 
   ngOnInit() {
@@ -16,6 +17,17 @@ export class SidenavComponent implements OnInit {
   home() {
     this.open = true;
   }
+
+    // console.log('vaibhaw',$event)
+    // if(this.value==true){
+    //   console.log("vaibhawww",this.value);
+    //   return ""
+    // }
+    // else{
+    //   console.log("vai");
+    //   return "menuToggle"
+    // }
+  
   // "person": [
   //     {
   //         "firstName": "vaibhw",

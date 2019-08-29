@@ -2,17 +2,18 @@
 <mat-sidenav-container fullscreen>
     <!-- <div  *ngIf="isOpen" (mouseover)="onToolBarMenuToggle()"> -->
     <mat-sidenav mode="side" id="sidenav" [class.menu-open]='!isOpen' [class.menu-close]='isOpen' opened>
-        <app-sidenav [value]="isOpen"></app-sidenav>
+        <app-sidenav [value]="isOpen" (mouseover)="isOpen==true && toggle==true && onToolBarMenuToggle()"></app-sidenav>
     </mat-sidenav>
     <!-- </div> -->
 
-    <mat-sidenav-content [ngStyle]="{'margin-left.px':content}" (scroll)=getScrollCordinates($event)>
+    <mat-sidenav-content [ngStyle]="{'margin-left.px':content}" id="sideContent" (scroll)=getScrollCordinates($event)>
         <!------------------------------------------------------------TOOLBAR----------------------------------------------------------------->
-        <div fxLayout="column" fxLayoutAlign="center" fxLayoutGap="80px">
+        <div fxLayout="column" fxLayoutAlign="center" fxLayoutGap="80px"
+            (mouseout)="isOpen==false && toggle==true && onToolBarMenuToggle()" class="content">
             <div>
                 <mat-toolbar class="mat-toolbar" [class.toolbarColor]="color">
                     <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="770px" [class.icons]=isOpen>
-                        <div fxLayout="row" fxFlexOffset="4px">
+                        <div fxLayout="row" fxFlexOffset="4px" (click)="mouseOut()">
                             <button *ngIf="color==false" mat-icon-button (click)="onToolBarMenuToggle()">
                                 <img src="../../assets/outer.svg">
                             </button>

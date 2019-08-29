@@ -6,7 +6,8 @@ import {SidenavContentComponent} from '../../src/app/components/sidenav-content/
 import { from } from 'rxjs';
 const routes: Routes = [
   {path:'', component:DashboardComponent },
-  {path:'content', component:SidenavContentComponent }
+  {path:'content', component:SidenavContentComponent },
+  {path:'navbar', component: NavbarComponent}
 ];
 
 @NgModule({

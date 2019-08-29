@@ -18,12 +18,15 @@ mat-toolbar{
     position: fixed;
     width: 246px;
     background-color: white;
+    transition-duration: 2s;
 
 }
 .logoName{
     font-size: 24px;
     font-weight: 400;
     font-family: 'Poppins';
+    transition-duration: 2s;
+    // transition-delay: 10s;
 
 }
 .profileName{
@@ -45,6 +48,7 @@ mat-toolbar{
     cursor: pointer;
     margin: 8px 13px 0px;
     font-size: 14px;
+    transition-duration: 2s;
 }
 .menuOpen{
     height: 49px;
@@ -54,6 +58,7 @@ mat-toolbar{
     cursor: pointer;
     margin: 8px 13px 0px;
     font-size: 14px;
+    transition-duration: 2s;
 }
 .menuOpen:hover{
     background:rgb(248, 248, 248);
@@ -62,6 +67,7 @@ mat-toolbar{
 .menu{
     width:30px;
     height: 30px;
+  transition-duration: 2s;
 }
 .menuHome{
     width:30px;
@@ -75,9 +81,11 @@ mat-toolbar{
 }
 .toolbar{
     width: 48px;
+    
 }
 .logo{
     margin-left: -6px;
+    transition-duration: 2s;
 }
 .menuToggl{
     height: 49px;
@@ -87,6 +95,7 @@ mat-toolbar{
     cursor: pointer;
     margin:0px 12px;
     font-size: 14px;
+    transition-duration: 2s;
 }
 .menuToggl:hover{
     background:rgb(248, 248, 248);
@@ -94,4 +103,6 @@ mat-toolbar{
 }
 .logoNam{
     margin-left: 40px;
+    // transition-duration: 1s;
+    // transition-duration: 3s;
 }

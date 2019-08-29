@@ -15,7 +15,9 @@ export class DashboardComponent implements OnInit {
   scrollTop: any;
   scrollLeft: any;
   scrollTopHeight: any;
-
+  toggle:boolean=false;
+  toggle1:boolean=true;
+ content1:boolean=false;
   constructor(@Inject(DOCUMENT) private document: Document) {
     // this.window = this.document.defaultView;
   }
@@ -29,16 +31,34 @@ export class DashboardComponent implements OnInit {
     // this.onWindowScroll();
   }
   onToolBarMenuToggle() {
+    
     this.isOpen = !this.isOpen;
     console.log("isopen", this.isOpen);
     if (this.isOpen) {
       this.content = 62;
+      // this.toggle=true;
 
     }
     else {
+      // this.toggle1=true;
       this.content = 262;
+    
+     
     }
   }
+  // onToolBarMenuToggle1() {
+  //   this.isOpen = !this.isOpen;
+  //   console.log("isopen", this.isOpen);
+  //   if (this.isOpen) {
+  //     this.content = 62;
+  //     this.toggle=true;
+
+  //   }
+  //   else {
+  //     this.content = 262;
+  //     this.toggle=false;
+  //   }
+  // }
   // onto() {
   //   console.log('vaibhaw');
 
@@ -52,7 +72,19 @@ export class DashboardComponent implements OnInit {
 
   }
  
-
+  mouseOut(){
+    console.log("vaibhaw",this.toggle);
+   this.toggle=true;
+  //  this.toggle1=false;
+    // if( this.toggle=true){
+    //   this.onToolBarMenuToggle();
+    // }
+    // else{
+    //   console.log("vaibhaw");
+      
+    // }
+    
+}
 
   // onWindowScroll() {
   //   // let number = window.pageYOffset || this.document.documentElement.scrollTop || this.document.body.scrollTop || 0;

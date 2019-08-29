@@ -6,10 +6,21 @@
 }
 #sidenav.menu-open{
     width:262px;
+    transition-duration: 2s;
 }
 #sidenav.menu-close{
     width:62px;
+    transition-duration: 2s;
 }
+#sideContent{
+    transition-duration: 2s;
+}
+// .sidecontent{
+//     margin-left: 62px;
+// }
+// .sidecontent1{
+//     margin-left: 262px;
+// }
 mat-sidenav-content {
     background-color: #f1f2f7;
 }
@@ -44,4 +55,3 @@ mat-toolbar{
     background-color: orange;
     height: 9px;
 }
-

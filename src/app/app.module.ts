@@ -9,7 +9,8 @@ import {MatBadgeModule} from '@angular/material'
 import {MatButtonModule} from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
 import {MatInputModule} from '@angular/material/input';
-import {MatMenuModule} from '@angular/material/menu';
+// import {MatMenuModule} from '@angular/material/menu';
+
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatIconModule} from '@angular/material/icon';
@@ -20,6 +21,8 @@ import { SidenavContentComponent } from './components/sidenav-content/sidenav-co
 import { SidenavComponent } from './components/sidenav/sidenav.component';
 import {MatListModule} from '@angular/material/list';
 import {MatTableModule} from '@angular/material/table';
+import { ChartsModule } from 'ng2-charts';
+import {MatMenuModule} from '@angular/material/menu';
 // import {AccordionModule} from 'primeng/accordion';     
 // import {MenuItem} from 'primeng/api';
 
@@ -39,6 +42,7 @@ import {MatTableModule} from '@angular/material/table';
     MatButtonModule,
     MatIconModule,
     MatTableModule,
+    ChartsModule,
     // AccordionModule,
     MatCardModule,
     MatInputModule,
